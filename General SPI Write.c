@@ -185,6 +185,8 @@ int main ()
 
       /* Write the write enable (WREN) instruction */
       WriteSize = 4;
+
+
       SendData[0] = 0x6;
 	  SendData[1] = 0x12;
 	  SendData[2] = 0x34;
