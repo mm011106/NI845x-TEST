@@ -28,8 +28,9 @@ int main ()
    int    Error            = 0;
 
    char   FirstDevice[260];       // 260 characters for 845x resource name
-   uInt16 ClockRate       = 1000; // clock rate in KHz (1000)
+   uInt16 ClockRate       = 100; // clock rate in KHz (1000)
    uInt32 ChipSelect      = 0;    // chip select pin (0)
+   uInt32 NumberOfDevices = 0;
 
    uInt32 WriteSize       = 0;
    uInt8  SendData[515];          // array for total bytes to write
@@ -46,7 +47,9 @@ int main ()
    printf ("\n\nSearching for Devices\n\n");
 
    /* find first device */
-   errChk (ni845xFindDevice (FirstDevice, NULL , NULL));
+   errChk (ni845xFindDevice (FirstDevice, NULL , &NumberOfDevices));
+   printf("Found %d device(s) on the USB. \n", NumberOfDevices);
+
 
    /* open device handle */
    errChk (ni845xOpen (FirstDevice, &DeviceHandle));
