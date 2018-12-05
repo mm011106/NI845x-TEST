@@ -1,10 +1,10 @@
 /*
 General SPI Write.c
-ƒeƒXƒg—p
+ï¿½eï¿½Xï¿½gï¿½p
 Based on the sample program in the driver of NI845x
 
 2018/12 V0.2 Miyamoto
-2018/12/05 V0.21 miyamoto 
+2018/12/05 V0.21 miyamoto
 
 
 */
@@ -78,18 +78,18 @@ int main ()
    {
 	  printf("counter: %d \n", i);
 
-      WriteSize = 4;
+    WriteSize = 4;
 
-      SendData[0] = 0x06;
-	  SendData[1] = 0x12;
-	  SendData[2] = 0x34;
-	  SendData[3] = 0x56;
+    SendData[0] = 0x06;
+    SendData[1] = 0x12;
+    SendData[2] = 0x34;
+    SendData[3] = 0x56;
 
-      errChk (ni845xSpiWriteRead (DeviceHandle, SPIHandle, WriteSize,
+    errChk (ni845xSpiWriteRead (DeviceHandle, SPIHandle, WriteSize,
          SendData, &ReadSize, ReadData));
 
-      Sleep(Delay); // allow the EEPROM to internaly
-                    // write the data to the target
+      Sleep(Delay);
+
    }
 
    printf ("\nData written !\n\n");
@@ -101,6 +101,7 @@ int main ()
 Error:
    if (Error < 0)
    {
+      printf ("\n-- Error Handring --\n");
       ni845xStatusToString(Error, 1024, ErrorMsg);
       printf ("\nError %d %s \n", Error, ErrorMsg);
       ni845xSpiConfigurationClose (SPIHandle);
@@ -110,4 +111,3 @@ Error:
 
    return 0;
 }
-
