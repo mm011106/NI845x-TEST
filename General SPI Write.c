@@ -3,7 +3,8 @@ General SPI Write.c
 テスト用
 Based on the sample program in the driver of NI845x
 
-2018/12 V0.2 Miyamoto 
+2018/12 V0.2 Miyamoto
+2018/12/05 V0.21 miyamoto 
 
 
 */
