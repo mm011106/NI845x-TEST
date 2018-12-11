@@ -19,7 +19,8 @@ __全体__
 
 __32bitチャンクの拡大__
 
-![tek00014](https://user-images.githubusercontent.com/9587359/49413491-78a3af80-f7b3-11e8-8255-18618003802e.png)
+![tek00015](https://user-images.githubusercontent.com/9587359/49779862-6e535980-fd4f-11e8-885a-3d98e7a1a9b5.png)
+
 
 8bitの間が結構空いています。これが問題かどうかは検討の必要があります。
 
