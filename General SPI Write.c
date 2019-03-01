@@ -68,7 +68,7 @@ int main ()
    errChk (ni845xSpiConfigurationSetClockPolarity (SPIHandle,
       kNi845xSpiClockPolarityIdleLow));
    errChk (ni845xSpiConfigurationSetClockPhase (SPIHandle,
-      kNi845xSpiClockPhaseFirstEdge));
+      kNi845xSpiClockPhaseSecondEdge));
 
 
    printf (" ....initialized successfully\n\n");
